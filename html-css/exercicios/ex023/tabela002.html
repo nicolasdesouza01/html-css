@@ -23,6 +23,7 @@
             border-collapse: collapse;
             margin: auto;
             width: 50%;
+            position: relative;
         }
 
         caption {
@@ -38,8 +39,22 @@
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: rgb(255, 255, 255);
         }
 
         td.num {
